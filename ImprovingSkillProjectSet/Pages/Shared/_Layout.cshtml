@@ -2,17 +2,67 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>@ViewBag.Title</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/all.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/jpg" href="~/images/Iam_tuseTheProgrammer_1.jpg" style="align-content:center" />
+    <script src="~/jquery/jquery.min.js"></script>
 </head>
+
 <body>
+    @*<div class="PersonInfo">
+        <h1>C# Programming my DNA</h1>
+        <p>
+            I am Dad S Wonkulah Jr, i am a young liberian C# programmer
+        </p>
+        <p>
+            Are you interested in computer programming, web application development, websites, enterprise apps or software development?
+        </p>
+    </div>*@
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="~/images/Iam_tuseTheProgrammer_2.jpg" style="width:70px;" class="rounded-circle" /> iamtuseTheProgrammer
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a asp-page="Index" class="active">Home</a></li>
+                <li><a asp-page="Programming">C# Programming</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">LINQ</a></li>
+                @*<li style="float:right"><a href="#">Login</a></li>*@
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    @*<div>
+        My name is Dad S Wonkulah, i am Software / Web Developer, i am very passionate
+        about this field and hope one day i come out successful!
+        <br />This is a just a simple website created to test my CSS skills set.
+    </div>*@
     <div>
         @base.RenderBody()
     </div>
 
-
-
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", false);
+    }
     <script src="~/js/site.js"></script>
+    <script src="~/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <footer>
+        <div>
+            <a href="#">
+                &copy; All rights reserved.
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
